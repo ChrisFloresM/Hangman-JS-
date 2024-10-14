@@ -1,16 +1,15 @@
-/*
 const input = require('sync-input');
 
-/!* Variables used for the game: Secret word picked from words array*!/
+/* Variables used for the game: Secret word picked from words array*/
 const words = ["python", "java", "swift", "javascript"];
-let secretWord = getRandomWord(); /!* Converted as an array *!/
+let secretWord = getRandomWord(); /* Converted as an array */
 
 let totalVictories = 0;
 
-/!* Welcome message *!/
+/* Welcome message */
 console.log("H A N G M A N # 8 attempts");
 
-/!* Word placeholder initialize and show *!/
+/* Word placeholder initialize and show */
 let placeHolder = generateWordPlaceholder();
 let attempts = 8;
 
@@ -39,7 +38,7 @@ while (true) {
     if(exitMenu) break;
 }
 
-/!* FUNCTION: Main function to play the game *!/
+/* FUNCTION: Main function to play the game */
 function play() {
     while (attempts > 0) {
         console.log("\n" + placeHolder);
@@ -71,17 +70,17 @@ function play() {
 }
 
 
-/!* FUNCTION: Get a random word from the words array *!/
+/* FUNCTION: Get a random word from the words array */
 function getRandomWord() {
     return words[Math.floor(Math.random() * words.length)];
 }
 
-/!* FUNCTION: Generate the placeholder from - to show instead of the word *!/
+/* FUNCTION: Generate the placeholder from - to show instead of the word */
 function generateWordPlaceholder() {
     return "-".repeat(secretWord.length);
 }
 
-/!* FUNCTION: Validate if an input is correct or not *!/
+/* FUNCTION: Validate if an input is correct or not */
 function validateLetter(letter) {
     const regexCorrect = /^[a-z]$/;
     const regexSingle = /([a-z].+)|(%s+)|(^$)/
@@ -99,7 +98,7 @@ function validateLetter(letter) {
     return true;
 }
 
-/!* FUNCTION: CheckLetter to verify if the input letter by the user is part of the secret word *!/
+/* FUNCTION: CheckLetter to verify if the input letter by the user is part of the secret word */
 function checkLetter(letter) {
     let idx = [];
 
@@ -126,12 +125,3 @@ function checkLetter(letter) {
 }
 
 
-*/
-
-setTimeout(function() {
-    console.log("5 seconds have passed! good bye!");
-}, 5000);
-
-setInterval(function() {
-    console.log("hello, it's me again!");
-}, 2000);
